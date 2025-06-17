@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="<%= user ? user.theme : 'light' %>" style="zoom: <%= user ? user.scale : '100%' %>; background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed; background-size: cover;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServerCenter</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Server<span>Center</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="service.html">Услуги</a></li>
+          <li><a href="team.html">Команда</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="logout.html">Выйти</a></li>
+            <li><a href="login.html">Вход</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+      <div style="border: 2px solid #4a6fa5; border-radius: 15px; padding: 30px; box-shadow: 0 0 20px rgba(74, 111, 165, 0.3); max-width: 500px; width: 100%; background-color: rgba(255, 255, 255, 0.85);">
+        <div class="auth-form">
+          <h2 class="page-title" style="text-align: center; margin-bottom: 20px;">Создать аккаунт</h2>
+          <div class="alert error" style="text-align: center;"></div>
+          <link rel="stylesheet" href="style.css">
+          <form action="register.html" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 5px;">
+              <label for="username" style="text-align: center;">Имя пользователя</label>
+              <input type="text" id="username" name="username" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 5px;">
+              <label for="email" style="text-align: center;">Email</label>
+              <input type="email" id="email" name="email" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 5px;">
+              <label for="password" style="text-align: center;">Пароль</label>
+              <input type="password" id="password" name="password" required minlength="6" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 5px;">
+              <label for="confirm-password" style="text-align: center;">Подтвердите пароль</label>
+              <input type="password" id="confirm-password" name="confirm-password" required minlength="6" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <button type="submit" class="btn" style="padding: 10px; background-color: #4a6fa5; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">Зарегистрироваться</button>
+          </form>
+          
+          <div class="auth-links" style="text-align: center; margin-top: 20px;">
+            Уже есть аккаунт? <a href="login.html">Войти</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+      <link rel="stylesheet" href="style.css">
+    <div class="container">
+      <p>&copy; 2025 ServerCenter. Все права защищены.</p>
+      <div class="theme-controls">
+        <button id="theme-toggle">Сменить тему</button>
+        <div class="scale-controls">
+          <button id="scale-down">-</button>
+          <span id="scale-value"><%= user ? user.scale : '100%' %></span>
+          <button id="scale-up">+</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

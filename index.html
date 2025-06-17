@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="<%= user ? user.theme : 'light' %>" style="zoom: <%= user ? user.scale : '100%' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServerCenter</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Server<span>Center</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="service.html">Услуги</a></li>
+          <li><a href="team.html">Команда</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="logout.html">Выйти</a></li>
+            <li><a href="login.html">Вход</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Профессиональные серверные решения</h2>
+        <p>Мы предоставляем надежные и масштабируемые серверные решения для бизнеса любого размера.</p>
+        <a href="service.html" class="btn">Наши услуги</a>
+      </div>
+    </section>
+    <link rel="stylesheet" href="style.css">
+
+    <section class="features">
+      <div class="container">
+        <div class="feature">
+          <h3>99.9% uptime</h3>
+          <p>Гарантированная доступность ваших сервисов</p>
+        </div>
+        <div class="feature">
+          <h3>Безопасность</h3>
+          <p>Многоуровневая защита данных</p>
+        </div>
+        <div class="feature">
+          <h3>Поддержка 24/7</h3>
+          <p>Наши специалисты всегда на связи</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+      <link rel="stylesheet" href="style.css">
+    <div class="container">
+      <p>&copy; 2025 ServerCenter. Все права защищены.</p>
+      <div class="theme-controls">
+        <button id="theme-toggle">Сменить тему</button>
+        <div class="scale-controls">
+          <button id="scale-down">-</button>
+          <span id="scale-value"><%= user ? user.scale : '100%' %></span>
+          <button id="scale-up">+</button>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

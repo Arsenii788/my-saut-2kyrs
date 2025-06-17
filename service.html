@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="<%= user ? user.theme : 'light' %>" style="zoom: <%= user ? user.scale : '100%' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServerCenter</title>
+</head>
+<body style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-attachment: fixed; background-position: center;">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Server<span>Center</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="service.html">Услуги</a></li>
+          <li><a href="team.html">Команда</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="logout.html">Выйти</a></li>
+            <li><a href="login.html">Вход</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; margin: 20px; border-radius: 5px;">
+    <h2 class="page-title">Наши услуги</h2>
+    <link rel="stylesheet" href="style.css">
+    <div class="service-list">
+      <div class="service-card">
+        <h3>Виртуальные серверы</h3>
+        <p>Мощные виртуальные серверы с гибкой конфигурацией и полным root-доступом.</p>
+        <p>От $10/месяц</p>
+      </div>
+      
+      <div class="service-card">
+        <h3>Выделенные серверы</h3>
+        <p>Физические серверы с максимальной производительностью и изолированными ресурсами.</p>
+        <p>От $100/месяц</p>
+      </div>
+      
+      <div class="service-card">
+        <h3>Облачное хранилище</h3>
+        <p>Надежное и безопасное хранилище данных с высокой доступностью.</p>
+        <p>От $0.03/GB в месяц</p>
+      </div>
+      
+      <div class="service-card">
+        <h3>Защита от DDoS</h3>
+        <p>Многоуровневая защита от распределенных атак любого масштаба.</p>
+        <p>От $20/месяц</p>
+      </div>
+      
+      <div class="service-card">
+        <h3>Резервное копирование</h3>
+        <p>Автоматическое резервное копирование данных с возможностью восстановления.</p>
+        <p>От $5/месяц</p>
+      </div>
+      
+      <div class="service-card">
+        <h3>Администрирование</h3>
+        <p>Профессиональное администрирование ваших серверов нашей командой.</p>
+        <p>От $50/месяц</p>
+      </div>
+    </div>
+  </main>
+  <footer style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 20px;">
+      <link rel="stylesheet" href="style.css">
+    <div class="container">
+      <p>&copy; 2025 ServerCenter. Все права защищены.</p>
+      <div class="theme-controls">
+        <button id="theme-toggle">Сменить тему</button>
+        <div class="scale-controls">
+          <button id="scale-down">-</button>
+          <span id="scale-value"><%= user ? user.scale : '100%' %></span>
+          <button id="scale-up">+</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

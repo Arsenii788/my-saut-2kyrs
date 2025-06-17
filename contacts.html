@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="<%= user ? user.theme : 'light' %>" style="zoom: <%= user ? user.scale : '100%' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServerCenter</title>
+</head>
+<body style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-attachment: fixed; background-position: center;">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Server<span>Center</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="service.html">Услуги</a></li>
+          <li><a href="team.html">Команда</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="logout.html">Выйти</a></li>
+            <li><a href="login.html">Вход</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main style="background-color: rgba(255, 255, 255, 0.85); margin: 20px; padding: 20px; border-radius: 5px;">
+    <h2 class="page-title">Свяжитесь с нами</h2>
+      <link rel="stylesheet" href="style.css">
+    <div class="contact-info">
+      <div class="container">
+        <div class="info-card">
+          <h3>Адрес</h3>
+          <p>г. Москва, ул. Серверная, д. 42, офис 404</p>
+        </div>
+        
+        <div class="info-card">
+          <h3>Телефон</h3>
+          <p>+7 (495) 123-45-67</p>
+          <p>Круглосуточная поддержка: +7 (800) 100-50-50</p>
+        </div>
+        
+        <div class="info-card">
+          <h3>Email</h3>
+          <p>info@servercenter.ru</p>
+          <p>support@servercenter.ru (техническая поддержка)</p>
+        </div>
+        
+        <div class="info-card">
+          <h3>Режим работы</h3>
+          <p>Офис: Пн-Пт 9:00-18:00</p>
+          <p>Техподдержка: 24/7</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-form">
+      <h3>Форма обратной связи</h3>
+      <form action="/submit-contact" method="POST">
+        <div class="form-group">
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Тема</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+    </div>
+    
+    <div class="map-container">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2b3c4d5e6f7g8h9i0j&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+    </div>
+  </main>
+  <footer style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 20px;">
+      <link rel="stylesheet" href="style.css">
+    <div class="container">
+      <p>&copy; 2025 ServerCenter. Все права защищены.</p>
+      <div class="theme-controls">
+        <button id="theme-toggle">Сменить тему</button>
+        <div class="scale-controls">
+          <button id="scale-down">-</button>
+          <span id="scale-value"><%= user ? user.scale : '100%' %></span>
+          <button id="scale-up">+</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

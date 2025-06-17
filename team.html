@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="<%= user ? user.theme : 'light' %>" style="zoom: <%= user ? user.scale : '100%' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServerCenter</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Server<span>Center</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="service.html">Услуги</a></li>
+          <li><a href="team.html">Команда</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="logout.html">Выйти</a></li>
+            <li><a href="login.html">Вход</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h2 class="page-title">Наша профессиональная команда</h2>
+      <link rel="stylesheet" href="style.css">
+    <div class="team-list">
+      <div class="team-card">
+        <img src="team1.jpg" alt="Алексей Петров" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto;">
+        <h3>Алексей Петров</h3>
+        <p class="position">Технический директор</p>
+        <p>15 лет опыта в управлении серверными инфраструктурами. Специалист по масштабируемым решениям.</p>
+      </div>
+      
+      <div class="team-card">
+        <img src="team2.jpg" alt="Мария Иванова" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto;">
+        <h3>Мария Иванова</h3>
+        <p class="position">Главный инженер</p>
+        <p>Эксперт по системам хранения данных и отказоустойчивым решениям. Работает с нами 8 лет.</p>
+      </div>
+      
+      <div class="team-card">
+        <img src="team3.jpg" alt="Дмитрий Смирнов" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto;">
+        <h3>Дмитрий Смирнов</h3>
+        <p class="position">Специалист по безопасности</p>
+        <p>Защищает наши системы от кибератак. Сертифицированный этичный хакер (CEH).</p>
+      </div>
+      
+      <div class="team-card">
+        <img src="team4.jpg" alt="Елена Кузнецова" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto;">
+        <h3>Елена Кузнецова</h3>
+        <p class="position">Менеджер по работе с клиентами</p>
+        <p>Помогает клиентам подобрать оптимальные решения. Всегда на связи 24/7.</p>
+      </div>
+      
+      <div class="team-card">
+        <img src="team5.jpg" alt="Игорь Васильев" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto;">
+        <h3>Игорь Васильев</h3>
+        <p class="position">Системный администратор</p>
+        <p>Обеспечивает бесперебойную работу серверов. Специалист по Linux-системам.</p>
+      </div>
+      
+      <div class="team-card">
+        <img src="team6.jpg" alt="Ольга Новикова" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto;">
+        <h3>Ольга Новикова</h3>
+        <p class="position">Разработчик облачных решений</p>
+        <p>Создает кастомные облачные инфраструктуры для наших клиентов.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+      <link rel="stylesheet" href="style.css">
+    <div class="container">
+      <p>&copy; 2025 ServerCenter. Все права защищены.</p>
+      <div class="theme-controls">
+        <button id="theme-toggle">Сменить тему</button>
+        <div class="scale-controls">
+          <button id="scale-down">-</button>
+          <span id="scale-value"><%= user ? user.scale : '100%' %></span>
+          <button id="scale-up">+</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

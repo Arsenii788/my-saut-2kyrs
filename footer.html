@@ -1,0 +1,18 @@
+  <footer>
+      <link rel="stylesheet" href="style.css">
+    <div class="container">
+      <p>&copy; 2023 ServerCenter. Все права защищены.</p>
+      <div class="theme-controls">
+        <button id="theme-toggle">Сменить тему</button>
+        <div class="scale-controls">
+          <button id="scale-down">-</button>
+          <span id="scale-value"><%= user ? user.scale : '100%' %></span>
+          <button id="scale-up">+</button>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="<%= user ? user.theme : 'light' %>" style="zoom: <%= user ? user.scale : '100%' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServerCenter</title>
+</head>
+<body style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-attachment: fixed; background-position: center;">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Server<span>Center</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="service.html">Услуги</a></li>
+          <li><a href="team.html">Команда</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="logout.html">Выйти</a></li>
+            <li><a href="login.html">Вход</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="background-color: rgba(255, 255, 255, 0.85); padding: 20px; margin: 20px; border-radius: 5px;">
+    <div class="account-info">
+      <h2>Добро пожаловать, Арсений!</h2>
+      
+      <div class="user-details">
+        <p><strong>Email:</strong> tiptop2001a@gmail.com</p>
+        <p><strong>Дата регистрации:</strong> 17.06.2025</p>
+      </div>
+      
+      <div class="settings-form">
+        <h3>Настройки отображения</h3>
+          <link rel="stylesheet" href="style.css">
+        <form id="settings-form">
+          <div class="form-group">
+            <label for="theme">Цветовая тема:</label>
+            <select id="theme" name="theme">
+              <option value="light" <%= user.theme === 'light' ? 'selected' : '' %>>Светлая</option>
+              <option value="dark" <%= user.theme === 'dark' ? 'selected' : '' %>>Темная</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="scale">Масштаб страницы:</label>
+            <select id="scale" name="scale">
+              <option value="80%" <%= user.scale === '80%' ? 'selected' : '' %>>80%</option>
+              <option value="90%" <%= user.scale === '90%' ? 'selected' : '' %>>90%</option>
+              <option value="100%" <%= user.scale === '100%' ? 'selected' : '' %>>100%</option>
+              <option value="110%" <%= user.scale === '110%' ? 'selected' : '' %>>110%</option>
+              <option value="120%" <%= user.scale === '120%' ? 'selected' : '' %>>120%</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn">Сохранить настройки</button>
+        </form>
+      </div>
+      
+      <div class="account-actions">
+        <h3>Действия с аккаунтом</h3>
+        <a href="change-password.html" class="btn secondary">Сменить пароль</a>
+        <a href="logout.html" class="btn danger">Выйти из аккаунта</a>
+      </div>
+    </div>
+  </main>
+  <footer style="background-color: rgba(0, 0, 0, 0.7);">
+      <link rel="stylesheet" href="style.css">
+    <div class="container">
+      <p>&copy; 2025 ServerCenter. Все права защищены.</p>
+      <div class="theme-controls">
+        <button id="theme-toggle">Сменить тему</button>
+        <div class="scale-controls">
+          <button id="scale-down">-</button>
+          <span id="scale-value"><%= user ? user.scale : '100%' %></span>
+          <button id="scale-up">+</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
